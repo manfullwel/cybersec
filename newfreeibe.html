@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor de Jesus | Cybersecurity Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #283593;
+            --accent-color: #3949ab;
+            --text-primary: #212121;
+            --text-secondary: #424242;
+            --background-light: #f5f5f5;
+            --background-dark: #e0e0e0;
+            --success-color: #2e7d32;
+            --warning-color: #f57f17;
+            --danger-color: #c62828;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .project-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+        }
+        
+        .project-body {
+            padding: 25px;
+        }
+        
+        .skill-badge {
+            background: var(--background-dark);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        
+        .contact-section {
+            background: var(--background-dark);
+            padding: 60px 0;
+        }
+        
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        
+        .btn-custom {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section com melhor centralização -->
+    <header class="hero text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">IGOR DE JESUS</h1>
+            <p class="lead mb-5">Cybersecurity Specialist | Google Certified</p>
+            
+            <!-- Roadmap com título -->
+            <h3 class="text-white mb-4">INTERESSES FUTUROS</h3>
+            <div class="roadmap d-flex justify-content-center gap-4 mb-5">
+                <div class="roadmap-step completed">
+                    <i class="fas fa-tools"></i> TI Tradicional
+                </div>
+                <div class="roadmap-step completed">
+                    <i class="fas fa-shield-alt"></i> Google Cyber
+                </div>
+                <div class="roadmap-step current">
+                    <i class="fas fa-user-secret"></i> Blue/Red Team
+                </div>
+                <div class="roadmap-step future">
+                    <i class="fas fa-cloud"></i> Cloud Security
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-5"><i class="fas fa-user-astronaut me-2"></i>SOBRE MIM</h2>
+                    
+                    <!-- Introdução Principal -->
+                    <div class="about-intro mb-5">
+                        <p class="lead">
+                            Durante 5 anos, atuei como <strong>técnico em computadores e smartphones (hardware e software)</strong>, 
+                            gerenciando meu próprio negócio de TI. Essa jornada solo, focada em manutenção e resolução de problemas, 
+                            me proporcionou uma base técnica sólida e a capacidade de <strong>transformar desafios em soluções robustas</strong>.
+                        </p>
+                    </div>
+    
+                    <!-- Terminal com Jornada -->
+                    <div class="terminal mt-4 mb-5">
+                        <div class="terminal-text">
+                            <span class="terminal-user">root@cybersec</span>:<span class="terminal-path">~/about#</span> cat jornada.txt<br>
+                            > Minha jornada em TI, com 5 anos gerenciando meu próprio negócio de manutenção de<br>
+                            > hardware e software, me mostrou como vulnerabilidades aparentemente simples podem<br>
+                            > comprometer sistemas inteiros. Essa experiência prática me levou a buscar<br>
+                            > especialização em Segurança Cibernética, onde hoje aplico conhecimentos técnicos<br>
+                            > e estratégicos para proteger infraestruturas digitais.
+                        </div>
+                    </div>
+    
+                    <!-- Seção de Estudos com Imagem -->
+                    <div class="study-section mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <img src="https://unsplash.com/pt-br/fotografias/uma-pilha-de-livros-sentados-em-cima-de-uma-mesa-AqSXHKhi-jQ" 
+                                     alt="Pilha de livros sobre Segurança Cibernética" 
+                                     class="img-fluid rounded shadow-sm study-image">
+                            </div>
+                            <div class="col-md-8">
+                                <h3 class="mb-4"><i class="fas fa-book me-2"></i>Livros de Segurança Cibernética e Tópicos Relacionados</h3>
+                                <p class="mb-4">
+                                    Atualmente, estou concluindo a Certificação Profissional em Segurança Cibernética da Google, 
+                                    onde desenvolvi habilidades em:
+                                </p>
+                                <div class="book-skills">
+                                    <span class="skill-badge"><i class="fas fa-shield-alt me-1"></i> Fundamentos de Segurança</span>
+                                    <span class="skill-badge"><i class="fas fa-bug me-1"></i> Análise de Ameaças</span>
+                                    <span class="skill-badge"><i class="fas fa-network-wired me-1"></i> Segurança de Redes</span>
+                                    <span class="skill-badge"><i class="fas fa-lock me-1"></i> Criptografia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <!-- Habilidades Técnicas -->
+                    <h3 class="mt-5 mb-4"><i class="fas fa-laptop-code me-2"></i>HABILIDADES TÉCNICAS</h3>
+                    <div class="mb-4">
+                        <span class="skill-badge"><i class="fab fa-google me-1"></i> Google Cybersecurity</span>
+                        <span class="skill-badge"><i class="fas fa-shield-alt me-1"></i> NIST CSF/RMF</span>
+                        <span class="skill-badge"><i class="fas fa-terminal me-1"></i> Linux/Bash</span>
+                        <span class="skill-badge"><i class="fas fa-database me-1"></i> SQL</span>
+                        <span class="skill-badge"><i class="fab fa-python me-1"></i> Python</span>
+                        <span class="skill-badge"><i class="fas fa-network-wired me-1"></i> SIEM</span>
+                        <span class="skill-badge"><i class="fas fa-lock me-1"></i> Pentesting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-project-diagram me-2"></i>PROJETOS</h2>
+            
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-danger">
+                            <i class="fas fa-database me-2"></i> Análise de Injeção SQL
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Red Team - Exploração de Vulnerabilidades</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Simular como atacantes exploram vulnerabilidades de injeção SQL.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Utilizei SQL e Python para demonstrar técnicas de exploração em ambiente controlado.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@red-team</span>:<span class="terminal-path">~/sql-injection#</span> python exploit.py<br>
+                                    > Explorando: ' OR '1'='1<br>
+                                    > Acesso concedido: dados sensíveis expostos
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Validação de entradas e prepared statements como contramedidas essenciais.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-danger">SQL</span>
+                                <span class="badge bg-danger">Python</span>
+                                <span class="badge bg-primary">OWASP A01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-warning">
+                            <i class="fas fa-lock-open me-2"></i> Autenticação Quebrada
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Teste de Força Bruta</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Avaliar resistência a ataques de autenticação.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Scripts em Python e conceitos do Hydra para simular ataques.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@red-team</span>:<span class="terminal-path">~/auth-test#</span> python brute_force.py<br>
+                                    > Tentativa 142: admin:password123<br>
+                                    > Acesso bem-sucedido após 3.2s
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Importância de MFA e políticas de bloqueio de contas.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-warning text-dark">Python</span>
+                                <span class="badge bg-warning text-dark">Hydra</span>
+                                <span class="badge bg-primary">OWASP A07</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-success">
+                            <i class="fas fa-network-wired me-2"></i> Segurança de Rede
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Firewall e Monitoramento</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Proteger rede contra tráfego malicioso.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Configuração de firewall em Linux e análise de logs.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@blue-team</span>:<span class="terminal-path">~/firewall#</span> ufw deny from 192.168.1.100<br>
+                                    > Regra adicionada: tráfego bloqueado<br>
+                                    > Log: 5 tentativas de acesso não autorizado
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Segmentação de rede e princípio do menor privilégio.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-success">Linux</span>
+                                <span class="badge bg-success">Firewall</span>
+                                <span class="badge bg-success">Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-info">
+                            <i class="fas fa-file-alt me-2"></i> Análise de Logs
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-info">Automação com Python</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Processar grandes volumes de logs para detectar anomalias.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Script Python para parsear e analisar logs automaticamente.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@blue-team</span>:<span class="terminal-path">~/log-analysis#</span> python analyzer.py<br>
+                                    > Logs processados: 1423<br>
+                                    > Alertas: 3 atividades suspeitas detectadas
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Padrões comuns em logs de segurança e IOCs.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge bg-info text-dark">Python</span>
+                                <span class="badge bg-info text-dark">SIEM</span>
+                                <span class="badge bg-primary">Blue Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header text-purple" style="color: var(--accent-purple);">
+                            <i class="fas fa-user-shield me-2"></i> Resposta a Incidentes
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--accent-purple);">Estudo de Caso</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Documentar processo de resposta a incidente.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Aplicação das fases de preparação, identificação, contenção.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@incident</span>:<span class="terminal-path">~/response#</span> ./playbook.sh<br>
+                                    > Fase: Contenção<br>
+                                    > Ações: Isolar sistemas afetados
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Importância de planos bem definidos e comunicação clara.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge" style="background: var(--accent-purple);">Documentação</span>
+                                <span class="badge" style="background: var(--accent-purple);">Playbooks</span>
+                                <span class="badge bg-primary">NIST CSF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header" style="background: var(--accent-green); color: #000;">
+                            <i class="fab fa-linux me-2"></i> Hardening Linux
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: var(--accent-green);">Proteção de Sistemas</h5>
+                            <p class="card-text">
+                                <strong>Desafio:</strong> Reduzir superfície de ataque em sistema Linux.
+                            </p>
+                            <p class="card-text">
+                                <strong>Abordagem:</strong> Configuração segura de usuários, permissões e serviços.
+                            </p>
+                            <div class="terminal">
+                                <div class="terminal-text">
+                                    <span class="terminal-user">root@hardening</span>:<span class="terminal-path">~/system#</span> chmod 700 /etc/shadow<br>
+                                    > Permissões ajustadas<br>
+                                    > Serviços desnecessários removidos: 5
+                                </div>
+                            </div>
+                            <p class="card-text mt-3">
+                                <strong>Aprendizados:</strong> Práticas essenciais para sistemas seguros.
+                            </p>
+                            <div class="mt-2">
+                                <span class="badge" style="background: var(--accent-green); color: #000;">Linux</span>
+                                <span class="badge" style="background: var(--accent-green); color: #000;">Bash</span>
+                                <span class="badge bg-primary">Blue Team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section com texto atualizado -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-graduation-cap me-2"></i>FORMAÇÃO</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <i class="fab fa-google me-2"></i> Graduação em Andamento
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Módulos Concluídos:</h5>
+                            <ul>
+                                <li>Fundamentos de segurança (NIST CSF, RMF)</li>
+                                <li>Ferramentas SIEM e análise de logs</li>
+                                <li>Hardening de sistemas Linux</li>
+                                <li>Resposta a incidentes</li>
+                                <li>Segurança de redes e sistemas</li>
+                                <li>Gerenciamento de riscos</li>
+                            </ul>
+                            <p class="card-text"><small class="text-muted">Em andamento - Conclusão prevista: Dezembro 2023</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-dark text-white">
+                            <i class="fas fa-brain me-2"></i> Pós-graduação em IA e Machine Learning
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pitágoras Unopar Anhanguera</h5>
+                            <p class="card-text">Conhecimento aplicável em segurança para:</p>
+                            <ul>
+                                <li>Detecção de anomalias</li>
+                                <li>Análise de malware</li>
+                                <li>Padrões em logs de segurança</li>
+                            </ul>
+                            <p class="card-text"><small class="text-muted">Início: 2023</small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            <i class="fas fa-university me-2"></i> Bacharelado em Análise e Desenvolvimento de Sistemas
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">FACULDADE AIEC</h5>
+                            <p class="card-text">Fundamentos de:</p>
+                            <ul>
+                                <li>Programação e algoritmos</li>
+                                <li>Redes de computadores</li>
+                                <li>Arquitetura de sistemas</li>
+                                <li>Banco de dados</li>
+                            </ul>
+                            <p class="card-text"><small class="text-muted">2020 - 2023</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Experiência Profissional -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-briefcase me-2"></i>EXPERIÊNCIA PROFISSIONAL</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="experience-card">
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                <i class="fas fa-laptop-code me-2"></i> Proprietário e Técnico em TI
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Empreendedor em Tecnologia</h5>
+                                <p class="text-muted">2018 - Presente</p>
+                                
+                                <div class="experience-content">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-3">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Gerenciamento de negócio próprio focado em manutenção de computadores e smartphones
+                                        </li>
+                                        <li class="mb-3">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Diagnóstico e resolução de problemas complexos em hardware e software
+                                        </li>
+                                        <li class="mb-3">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Implementação de soluções de segurança para clientes
+                                        </li>
+                                        <li class="mb-3">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            Gestão de relacionamento com clientes e fornecedores
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <span class="badge bg-primary">Gestão de Negócios</span>
+                                    <span class="badge bg-primary">Suporte Técnico</span>
+                                    <span class="badge bg-primary">Resolução de Problemas</span>
+                                    <span class="badge bg-primary">Atendimento ao Cliente</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-star me-2"></i>HABILIDADES PESSOAIS</h2>
+            
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-tasks me-2"></i> Habilidades Organizacionais</h5>
+                                    <p class="card-text">Proficiente em organizar carga de trabalho e priorizar tarefas para cumprir prazos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-users me-2"></i> Comunicação com Clientes</h5>
+                                    <p class="card-text">Habilidade em construir relacionamentos e explicar conceitos técnicos de forma clara.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-sync-alt me-2"></i> Adaptabilidade</h5>
+                                    <p class="card-text">Rápido para aprender novas tecnologias e se ajustar a mudanças.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-project-diagram me-2"></i> Gerenciamento de Projetos</h5>
+                                    <p class="card-text">Capacidade de gerenciar múltiplas tarefas em ambientes dinâmicos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-comments me-2"></i> Comunicação Eficaz</h5>
+                                    <p class="card-text">Habilidades interpessoais para trabalhar em equipe e relatar problemas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-puzzle-piece me-2"></i> Resolução de Problemas</h5>
+                                    <p class="card-text">Capacidade analítica para identificar e resolver desafios complexos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5"><i class="fas fa-rocket me-2"></i>INTERESSES FUTUROS</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-certificate me-2"></i> Certificações Planejadas</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><span class="badge bg-primary">CompTIA Security+</span></li>
+                                        <li class="mb-2"><span class="badge bg-danger">Certified Ethical Hacker (CEH)</span></li>
+                                        <li><span class="badge bg-info text-dark">AWS Certified Security</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-book me-2"></i> Áreas de Estudo</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-angle-right me-2"></i> Pentesting Avançado</li>
+                                        <li class="mb-2"><i class="fas fa-angle-right me-2"></i> Segurança em Cloud</li>
+                                        <li><i class="fas fa-angle-right me-2"></i> Automação com Python</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4"><i class="fas fa-paper-plane me-2"></i>CONTATO</h2>
+                    <p class="lead mb-5">Interessado em colaborar ou saber mais sobre meu trabalho?</p>
+                    
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <a href="https://www.linkedin.com/in/igor-de-jesus-57b60228b/" target="_blank" class="btn btn-outline-primary mx-3 mb-3">
+                            <i class="fab fa-linkedin me-2"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="btn btn-outline-dark mx-3 mb-3">
+                            <i class="fab fa-github me-2"></i> GitHub
+                        </a>
+                        <a href="mailto:seuemail@exemplo.com" class="btn btn-outline-success mx-3 mb-3">
+                            <i class="fas fa-envelope me-2"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center bg-dark">
+        <div class="container">
+            <p class="mb-2">"Até aqui o Senhor nos ajudou." - 1 Samuel 7:12</p>
+            <p class="mb-0">© <span id="current-year"></span> Igor de Jesus. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Update year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Typewriter effect for terminal text
+        const terminals = document.querySelectorAll('.terminal-text');
+        terminals.forEach(terminal => {
+            const text = terminal.innerHTML;
+            terminal.innerHTML = '';
+            
+            let i = 0;
+            const speed = 20;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    terminal.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
+</body>
+</html>
+/* Adicione ao CSS existente */
+.about-intro {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.terminal {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.terminal-text {
+    font-family: 'Source Code Pro', monospace;
+    color: #00ff00;
+    line-height: 1.6;
+}
+
+.study-section {
+    background: rgba(26, 35, 126, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.study-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.study-image:hover {
+    transform: scale(1.02);
+}
+
+.book-skills {
+    margin-top: 20px;
+}
+
+.book-skills .skill-badge {
+    background: var(--primary-color);
+    color: white;
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.book-skills .skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .roadmap {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .roadmap-step {
+        width: 100%;
+        max-width: 300px;
+    }
+}

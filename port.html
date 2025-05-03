@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor de Jesus | Cybersecurity Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e0e5ec;
+            --shadow-light: #ffffff;
+            --shadow-dark: #a3b1c6;
+            --accent-color: #3949ab;
+            --text-primary: #212121;
+            --background: #e0e5ec;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+        }
+        .neumorphic {
+            background: var(--primary-color);
+            border-radius: 20px;
+            box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .neumorphic-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            border-radius: 30px;
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+            padding: 0.5rem 1.5rem;
+            margin: 0.3rem;
+            font-size: 1rem;
+        }
+        .roadmap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .roadmap-step {
+            text-align: center;
+            position: relative;
+        }
+        .roadmap-step .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .roadmap-step.completed .icon { color: #2e7d32; }
+        .roadmap-step.current .icon { color: #3949ab; }
+        .roadmap-step.future .icon { color: #bdbdbd; }
+        .roadmap-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -1.5rem;
+            width: 3rem;
+            height: 4px;
+            background: linear-gradient(90deg, var(--shadow-dark), var(--shadow-light));
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .roadmap { flex-direction: column; gap: 1rem; }
+            .roadmap-step:not(:last-child)::after { display: none; }
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .terminal {
+            background: #23272e;
+            color: #00ff00;
+            font-family: 'Source Code Pro', monospace;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 4px 4px 12px #b0b8c1, -4px -4px 12px #fff;
+        }
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info .neumorphic-badge {
+            font-size: 1.1rem;
+            margin: 0.5rem 1rem;
+        }
+        .study-section img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 4px 4px 12px var(--shadow-dark), -4px -4px 12px var(--shadow-light);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="neumorphic text-center mb-5">
+        <h1 class="display-4 fw-bold">IGOR DE JESUS</h1>
+        <p class="lead">Cybersecurity Specialist | Blue Team & Red Team</p>
+        <div class="roadmap" id="interactiveRoadmap">
+            <div class="roadmap-step completed">
+                <div class="icon"><i class="fas fa-tools"></i></div>
+                <div>IT Infrastructure</div>
+            </div>
+            <div class="roadmap-step completed">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <div>Google Cybersecurity</div>
+            </div>
+            <div class="roadmap-step current">
+                <div class="icon"><i class="fas fa-user-shield"></i></div>
+                <div>Security Operations</div>
+            </div>
+            <div class="roadmap-step future">
+                <div class="icon"><i class="fas fa-cloud"></i></div>
+                <div>Cloud Security</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-user-astronaut me-2"></i>About Me</h2>
+        <p>
+            For 5 years, I managed my own IT business, specializing in computer and smartphone maintenance (hardware and software). This solo journey gave me a solid technical foundation and the ability to turn challenges into robust solutions. My hands-on experience revealed how simple vulnerabilities can compromise entire systems, leading me to specialize in Cybersecurity.
+        </p>
+        <div class="terminal">
+            <span class="terminal-user">root@cybersec</span>:<span class="terminal-path">~/about#</span> cat journey.txt<br>
+            &gt; 5 years in IT, running my own business.<br>
+            &gt; Realized the impact of small vulnerabilities.<br>
+            &gt; Now focused on protecting digital infrastructures with technical and strategic skills.
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-laptop-code me-2"></i>Technical Skills</h2>
+        <div>
+            <span class="neumorphic-badge"><i class="fab fa-google me-1"></i> Google Cybersecurity</span>
+            <span class="neumorphic-badge"><i class="fas fa-shield-alt me-1"></i> NIST CSF/RMF</span>
+            <span class="neumorphic-badge"><i class="fas fa-terminal me-1"></i> Linux/Bash</span>
+            <span class="neumorphic-badge"><i class="fas fa-database me-1"></i> SQL</span>
+            <span class="neumorphic-badge"><i class="fab fa-python me-1"></i> Python</span>
+            <span class="neumorphic-badge"><i class="fas fa-network-wired me-1"></i> SIEM</span>
+            <span class="neumorphic-badge"><i class="fas fa-lock me-1"></i> Pentesting</span>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-graduation-cap me-2"></i>Education & Certifications</h2>
+        <div class="row align-items-center">
+            <div class="col-md-4 study-section">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity Books">
+            </div>
+            <div class="col-md-8">
+                <h4>Google Cybersecurity Professional Certificate</h4>
+                <ul>
+                    <li>NIST Cybersecurity Framework (CSF)</li>
+                    <li>SIEM Tools & Log Analysis</li>
+                    <li>Incident Response & Playbooks</li>
+                    <li>Linux Security & Hardening</li>
+                    <li>Network Security & Firewalls</li>
+                    <li>Python for Security Automation</li>
+                </ul>
+                <h5 class="mt-4">Other Courses</h5>
+                <ul>
+                    <li>Linux Essentials</li>
+                    <li>SQL for Security</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Interests Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-lightbulb me-2"></i>Future Interests</h2>
+        <div>
+            <span class="neumorphic-badge"><i class="fas fa-certificate me-1"></i> CompTIA Security+</span>
+            <span class="neumorphic-badge"><i class="fas fa-user-secret me-1"></i> CEH (Certified Ethical Hacker)</span>
+            <span class="neumorphic-badge"><i class="fas fa-cloud me-1"></i> Cloud Security</span>
+            <span class="neumorphic-badge"><i class="fas fa-bug me-1"></i> Advanced Pentesting</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-project-diagram me-2"></i>Projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="neumorphic mb-4">
+                    <h5><i class="fas fa-database me-2"></i>SQL Injection Analysis</h5>
+                    <div class="terminal">
+                        <span class="terminal-user">root@red-team</span>:<span class="terminal-path">~/sql-injection#</span> python exploit.py<br>
+                        &gt; Exploiting: ' OR '1'='1<br>
+                        &gt; Access granted: sensitive data exposed
+                    </div>
+                    <p>
+                        <strong>Challenge:</strong> Simulate and detect SQL Injection vulnerabilities in a test environment.<br>
+                        <strong>Approach:</strong> Developed a vulnerable web app and used automated scripts to exploit and patch the flaw.<br>
+                        <strong>Learning:</strong> Understood the importance of input validation, parameterized queries, and how attackers think.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="neumorphic mb-4">
+                    <h5><i class="fas fa-network-wired me-2"></i>Network Security Monitoring</h5>
+                    <div class="terminal">
+                        <span class="terminal-user">root@blue-team</span>:<span class="terminal-path">~/firewall#</span> ufw deny from 192.168.1.100<br>
+                        &gt; Rule added: traffic blocked<br>
+                        &gt; Log: 5 unauthorized access attempts
+                    </div>
+                    <p>
+                        <strong>Challenge:</strong> Protect a small business network from unauthorized access.<br>
+                        <strong>Approach:</strong> Configured firewalls, monitored logs, and implemented network segmentation.<br>
+                        <strong>Learning:</strong> Gained hands-on experience with SIEM tools, log analysis, and incident response.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="neumorphic mb-4">
+                    <h5><i class="fas fa-user-shield me-2"></i>Incident Response Playbook</h5>
+                    <div class="terminal">
+                        <span class="terminal-user">root@incident</span>:<span class="terminal-path">~/response#</span> ./playbook.sh<br>
+                        &gt; Phase: Containment<br>
+                        &gt; Actions: Isolate affected systems
+                    </div>
+                    <p>
+                        <strong>Challenge:</strong> Document and automate the incident response process.<br>
+                        <strong>Approach:</strong> Created a bash playbook to guide through preparation, identification, containment, and recovery.<br>
+                        <strong>Learning:</strong> Improved documentation skills and understood the value of clear, repeatable processes.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="neumorphic mb-4">
+                    <h5><i class="fab fa-python me-2"></i>Log Analysis Automation</h5>
+                    <div class="terminal">
+                        <span class="terminal-user">root@blue-team</span>:<span class="terminal-path">~/log-analysis#</span> python analyzer.py<br>
+                        &gt; Logs processed: 1423<br>
+                        &gt; Alerts: 3 suspicious activities detected
+                    </div>
+                    <p>
+                        <strong>Challenge:</strong> Detect anomalies in large volumes of security logs.<br>
+                        <strong>Approach:</strong> Developed a Python script to parse, analyze, and flag suspicious patterns.<br>
+                        <strong>Learning:</strong> Enhanced skills in Python, regular expressions, and security event correlation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Roadmap Section -->
+    <section class="neumorphic">
+        <h2 class="section-title"><i class="fas fa-route me-2"></i>Minha Jornada</h2>
+        <div class="timeline">
+            <div class="timeline-item completed">
+                <div class="timeline-icon"><i class="fas fa-tools"></i></div>
+                <div class="timeline-content">
+                    <h5>2018-2023: IT Technician & Business Owner</h5>
+                    <p>Managed my own IT business, building a strong technical foundation in hardware, software, and client support.</p>
+                </div>
+            </div>
+            <div class="timeline-item completed">
+                <div class="timeline-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="timeline-content">
+                    <h5>2023: Google Cybersecurity Certificate</h5>
+                    <p>Completed modules on NIST CSF, SIEM, incident response, and security automation.</p>
+                </div>
+            </div>
+            <div class="timeline-item current">
+                <div class="timeline-icon"><i class="fas fa-user-shield"></i></div>
+                <div class="timeline-content">
+                    <h5>2024: Security Projects & Practical Learning</h5>
+                    <p>Developing real-world projects in network defense, log analysis, and incident response.</p>
+                </div>
+            </div>
+            <div class="timeline-item future">
+                <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                <div class="timeline-content">
+                    <h5>Next Steps: Certifications & Cloud Security</h5>
+                    <p>Studying for CompTIA Security+, CEH, and exploring cloud security and advanced pentesting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline CSS -->
+    <style>
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 2rem;
+            border-left: 4px solid var(--shadow-dark);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 2.5rem;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: -2.2rem;
+            top: 0;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+        }
+        .timeline-item.completed .timeline-icon { color: #2e7d32; }
+        .timeline-item.current .timeline-icon { color: #3949ab; }
+        .timeline-item.future .timeline-icon { color: #bdbdbd; }
+        .timeline-content h5 { margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .timeline { padding-left: 1rem; }
+            .timeline-item { padding-left: 2.5rem; }
+        }
+    </style>
+
+    <!-- Contact Section -->
+    <section class="neumorphic contact-info">
+        <h2 class="section-title"><i class="fas fa-envelope me-2"></i>Contact</h2>
+        <p>Interested in collaborating or learning more about my work?</p>
+        <div>
+            <span class="neumorphic-badge"><i class="fas fa-envelope me-1"></i> igorofyeshua@gmail.com</span>
+            <span class="neumorphic-badge"><i class="fab fa-whatsapp me-1"></i> +1 (479) 345-0339</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background: none; color: #888;">
+        <div>
+            <em>"Security is not a product, but a process." – Bruce Schneier</em>
+        </div>
+        <div>&copy; 2024 Igor de Jesus</div>
+    </footer>
+</body>
+</html>
+<!-- Adicione esta seção após a seção de banco de dados -->
+<section class="neumorphic">
+    <h2 class="section-title"><i class="fas fa-cloud me-2"></i>Arquitetura Cloud Segura</h2>
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="cloud-architecture">
+                <h5 class="mb-4"><i class="fab fa-aws me-2"></i>Arquitetura Segura em AWS</h5>
+                <div class="architecture-diagram">
+                    <img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2020/01/25/image-2.png" alt="Arquitetura AWS Segura" class="img-fluid rounded">
+                </div>
+                <div class="security-components mt-4">
+                    <h6>Componentes de Segurança Implementados:</h6>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-lock"></i>
+                                <span>AWS WAF</span>
+                                <small>Proteção contra ataques web</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span>IAM</span>
+                                <small>Controle de acesso granular</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Security Groups</span>
+                                <small>Firewall virtual</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-network-wired"></i>
+                                <span>VPC</span>
+                                <small>Isolamento de rede</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-eye"></i>
+                                <span>CloudTrail</span>
+                                <small>Auditoria e logs</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="security-item">
+                                <i class="fas fa-bell"></i>
+                                <span>CloudWatch</span>
+                                <small>Monitoramento e alertas</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.roadmap-step').forEach(step => {
+            step.addEventListener('click', function() {
+                const timelineContent = {
+                    'IT Infrastructure': `5 anos resolvendo +500 casos técnicos<br>Taxa de satisfação: 98%`,
+                    'Google Cybersecurity': `35 módulos completados<br>12 projetos práticos`,
+                    'Security Operations': `Monitoramento de 50GB de logs/dia<br>Detecção de 15 ameaças/mês`,
+                    'Cloud Security': `AWS/GCP/Azure<br>Certificações em progresso`
+                };
+                
+                const content = timelineContent[this.querySelector('div').textContent.trim()];
+                this.classList.toggle('active');
+                this.querySelector('.icon').innerHTML = content;
+            });
+        });
+    </script>
+</section>
+<!-- Adicione esta seção após a seção de fluxos de automação -->
+<section class="neumorphic">
+    <h2 class="section-title"><i class="fas fa-database me-2"></i>Interação com Banco de Dados</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="db-card">
+                <h5><i class="fas fa-table me-2"></i>Consultas SQL para Análise de Segurança</h5>
+                <div class="code-block">
+                    <pre><code class="language-sql">
+-- Consulta para detectar tentativas de login suspeitas
+SELECT 
+    ip_address,
+    COUNT(*) as attempt_count,
+    MIN(timestamp) as first_attempt,
+    MAX(timestamp) as last_attempt
+FROM login_attempts
+WHERE success = false
+    AND timestamp > NOW() - INTERVAL '24 HOURS'
+GROUP BY ip_address
+HAVING COUNT(*) > 5
+ORDER BY attempt_count DESC;
+                    </code></pre>
+                </div>
+                <p class="mt-3">
+                    <strong>Objetivo:</strong> Identificar possíveis ataques de força bruta detectando múltiplas 
+                    tentativas de login malsucedidas do mesmo endereço IP em um curto período.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="db-card">
+                <h5><i class="fas fa-sitemap me-2"></i>Estrutura NoSQL (MongoDB)</h5>
+                <div class="code-block">
+                    <pre><code class="language-json">
+// Documento de evento de segurança em MongoDB
+{
+  "_id": ObjectId("60a2e5e4b8e9a7c3d4f5e6f7"),
+  "timestamp": ISODate("2023-05-15T14:32:10.456Z"),
+  "event_type": "access_attempt",
+  "source": {
+    "ip": "192.168.1.105",
+    "geo": {
+      "country": "Unknown",
+      "city": "Unknown"
+    },
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  },
+  "target": {
+    "resource": "/admin/dashboard",
+    "method": "POST"
+  },
+  "result": "blocked",
+  "risk_score": 85,
+  "tags": ["suspicious", "repeated_attempt"]
+}
+                    </code></pre>
+                </div>
+                <p class="mt-3">
+                    <strong>Objetivo:</strong> Estrutura flexível para armazenar eventos de segurança com metadados 
+                    detalhados para análise posterior e correlação de eventos.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.roadmap-step').forEach(step => {
+            step.addEventListener('click', function() {
+                const timelineContent = {
+                    'IT Infrastructure': `5 anos resolvendo +500 casos técnicos<br>Taxa de satisfação: 98%`,
+                    'Google Cybersecurity': `35 módulos completados<br>12 projetos práticos`,
+                    'Security Operations': `Monitoramento de 50GB de logs/dia<br>Detecção de 15 ameaças/mês`,
+                    'Cloud Security': `AWS/GCP/Azure<br>Certificações em progresso`
+                };
+                
+                const content = timelineContent[this.querySelector('div').textContent.trim()];
+                this.classList.toggle('active');
+                this.querySelector('.icon').innerHTML = content;
+            });
+        });
+    </script>
+</section>
+<!-- Adicione esta seção após a seção de projetos -->
+<section class="neumorphic">
+    <h2 class="section-title"><i class="fas fa-film me-2"></i>Demonstrações</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="demo-card">
+                <h5><i class="fas fa-shield-alt me-2"></i>Análise de Logs em Ação</h5>
+                <div class="demo-gif">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzZmMjQ5YmQzigntyNDI0Y2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY2QzY

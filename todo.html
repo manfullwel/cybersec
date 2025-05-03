@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .todo-container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+        }
+        .todo-title {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 24px;
+        }
+        .todo-input-group {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .todo-item:last-child {
+            border-bottom: none;
+        }
+        .todo-text {
+            flex: 1;
+            word-break: break-word;
+        }
+        .btn-delete {
+            background: none;
+            border: none;
+            color: #dc3545;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .btn-delete:hover {
+            color: #a71d2a;
+        }
+        @media (max-width: 500px) {
+            .todo-container {
+                padding: 18px 6px 12px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h2 class="todo-title">To-Do List</h2>
+        <div class="todo-input-group">
+            <input type="text" id="todo-input" class="form-control" placeholder="Add a new task..." aria-label="Add a new task">
+            <button id="add-btn" class="btn btn-primary" aria-label="Add task">Add</button>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+    <script>
+        const input = document.getElementById('todo-input');
+        const addBtn = document.getElementById('add-btn');
+        const list = document.getElementById('todo-list');
+
+        function createTodoItem(text) {
+            const li = document.createElement('li');
+            li.className = 'todo-item';
+            const span = document.createElement('span');
+            span.className = 'todo-text';
+            span.textContent = text;
+            const delBtn = document.createElement('button');
+            delBtn.className = 'btn-delete';
+            delBtn.innerHTML = '<span aria-hidden="true">&times;</span>';
+            delBtn.title = 'Delete task';
+            delBtn.onclick = () => {
+                li.remove();
+                saveTodos();
+            };
+            li.appendChild(span);
+            li.appendChild(delBtn);
+            return li;
+        }
+
+        function saveTodos() {
+            const todos = [];
+            list.querySelectorAll('.todo-text').forEach(span => {
+                todos.push(span.textContent);
+            });
+            localStorage.setItem('todos', JSON.stringify(todos));
+        }
+
+        function loadTodos() {
+            const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+            todos.forEach(text => {
+                list.appendChild(createTodoItem(text));
+            });
+        }
+
+        addBtn.onclick = () => {
+            const text = input.value.trim();
+            if (text) {
+                list.appendChild(createTodoItem(text));
+                input.value = '';
+                saveTodos();
+            }
+            input.focus();
+        };
+
+        input.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+                addBtn.click();
+            }
+        });
+
+        loadTodos();
+    </script>
+</body>
+</html>
